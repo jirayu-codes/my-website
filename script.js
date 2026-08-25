@@ -1,6 +1,6 @@
 // Filter drinks by category when a filter button is clicked
 function filterDrinks(event) {
-  const selectedFilter = event.target.dataset.filter;
+  const selectedFilter = event.currentTarget.dataset.filter;
   const allCards = document.querySelectorAll('.drink-card');
 
   document.querySelector('.filter-btn.active').classList.remove('active');
