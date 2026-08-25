@@ -74,6 +74,69 @@ h3 {
   border-bottom: 2px solid var(--card-border);
 }
 
+/* Hero cup with steam animation */
+
+.hero-cup {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.cup-emoji {
+  font-size: 4.5rem;
+  display: inline-block;
+}
+
+.steam {
+  position: absolute;
+  bottom: 70%;
+  width: 8px;
+  height: 24px;
+  background: linear-gradient(180deg, transparent, rgba(111, 78, 55, 0.35));
+  border-radius: 50%;
+  filter: blur(3px);
+  animation: steam-rise 2.4s ease-in-out infinite;
+}
+
+.steam-1 { left: 28%; animation-delay: 0s; }
+.steam-2 { left: 50%; animation-delay: 0.8s; }
+.steam-3 { left: 68%; animation-delay: 1.6s; }
+
+@keyframes steam-rise {
+  0% {
+    transform: translateY(6px) scaleY(0.8);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-18px) scaleY(1.2);
+    opacity: 0;
+  }
+}
+
+/* Decorative divider */
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.divider span:first-child,
+.divider span:last-child {
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
 .site-header h1 {
   color: var(--brand);
   font-size: 3.2rem;
@@ -103,6 +166,24 @@ h3 {
   font-size: 1rem;
   box-shadow: 0 4px 12px rgba(111, 78, 55, 0.25);
   border: 2px solid var(--card-border);
+}
+
+/* ===========================
+   Intro Section
+   =========================== */
+
+.intro {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 0.5rem;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: var(--text);
+  opacity: 0.85;
+  font-style: italic;
 }
 
 /* ===========================
@@ -168,6 +249,50 @@ h3 {
   border: 1px solid var(--card-border);
   position: relative;
   transition: all 0.4s ease;
+  animation: card-enter 0.6s ease backwards;
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.drink-card:nth-child(1) { animation-delay: 0.05s; }
+.drink-card:nth-child(2) { animation-delay: 0.1s; }
+.drink-card:nth-child(3) { animation-delay: 0.15s; }
+.drink-card:nth-child(4) { animation-delay: 0.2s; }
+.drink-card:nth-child(5) { animation-delay: 0.25s; }
+.drink-card:nth-child(6) { animation-delay: 0.3s; }
+.drink-card:nth-child(7) { animation-delay: 0.35s; }
+.drink-card:nth-child(8) { animation-delay: 0.4s; }
+.drink-card:nth-child(9) { animation-delay: 0.45s; }
+.drink-card:nth-child(10) { animation-delay: 0.5s; }
+
+/* Category badges */
+
+.category-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10;
+  background: linear-gradient(135deg, #C96F3B 0%, #A85B2E 100%);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(111, 78, 55, 0.25);
+}
+
+.category-badge.iced {
+  background: linear-gradient(135deg, #7FA8B8 0%, #5D8AA0 100%);
 }
 
 .drink-card:hover {

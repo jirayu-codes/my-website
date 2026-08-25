@@ -13,10 +13,23 @@
 <body>
 
   <header class="site-header">
+    <div class="hero-cup" aria-hidden="true">
+      <span class="steam steam-1"></span>
+      <span class="steam steam-2"></span>
+      <span class="steam steam-3"></span>
+      <span class="cup-emoji">☕</span>
+    </div>
     <h1>Brew Explorer</h1>
     <p class="tagline">Discover your perfect cup</p>
+    <div class="divider" aria-hidden="true">
+      <span></span><span>☕</span><span></span>
+    </div>
     <span class="fav-counter" id="favorite-counter">0</span>
   </header>
+
+  <section class="intro">
+    <p>Ten classic drinks, one cozy guide. Hover a card to peek at the recipe, and tap the heart to save your favorites.</p>
+  </section>
 
   <section class="filters" aria-label="Filter drinks by category">
     <button class="filter-btn active" data-filter="all">All</button>
@@ -27,6 +40,7 @@
   <main class="drink-grid">
 
     <div class="drink-card" data-category="hot">
+      <span class="category-badge">Hot 🔥</span>
       <button class="fav-btn" aria-label="Add Espresso to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&h=300&fit=crop" alt="Espresso">
@@ -40,6 +54,7 @@
     </div>
 
     <div class="drink-card" data-category="hot">
+      <span class="category-badge">Hot 🔥</span>
       <button class="fav-btn" aria-label="Add Latte to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop" alt="Latte">
@@ -53,6 +68,7 @@
     </div>
 
     <div class="drink-card" data-category="hot">
+      <span class="category-badge">Hot 🔥</span>
       <button class="fav-btn" aria-label="Add Cappuccino to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop" alt="Cappuccino">
@@ -66,6 +82,7 @@
     </div>
 
     <div class="drink-card" data-category="hot">
+      <span class="category-badge">Hot 🔥</span>
       <button class="fav-btn" aria-label="Add Mocha to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400&h=300&fit=crop" alt="Mocha">
@@ -79,6 +96,7 @@
     </div>
 
     <div class="drink-card" data-category="hot">
+      <span class="category-badge">Hot 🔥</span>
       <button class="fav-btn" aria-label="Add Americano to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop" alt="Americano">
@@ -92,6 +110,7 @@
     </div>
 
     <div class="drink-card" data-category="hot">
+      <span class="category-badge">Hot 🔥</span>
       <button class="fav-btn" aria-label="Add Macchiato to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400&h=300&fit=crop" alt="Macchiato">
@@ -105,6 +124,7 @@
     </div>
 
     <div class="drink-card" data-category="iced">
+      <span class="category-badge iced">Iced 🧊</span>
       <button class="fav-btn" aria-label="Add Cold Brew to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop" alt="Cold Brew">
@@ -118,6 +138,7 @@
     </div>
 
     <div class="drink-card" data-category="hot">
+      <span class="category-badge">Hot 🔥</span>
       <button class="fav-btn" aria-label="Add Flat White to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop" alt="Flat White">
@@ -131,6 +152,7 @@
     </div>
 
     <div class="drink-card" data-category="hot">
+      <span class="category-badge">Hot 🔥</span>
       <button class="fav-btn" aria-label="Add Cortado to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1643397652694-646c2c3c9884?w=400&h=300&fit=crop" alt="Cortado">
@@ -144,6 +166,7 @@
     </div>
 
     <div class="drink-card" data-category="hot">
+      <span class="category-badge">Hot 🔥</span>
       <button class="fav-btn" aria-label="Add Irish Coffee to favorites">♡</button>
       <div class="card-front">
         <img class="drink-img" src="https://images.unsplash.com/photo-1730190982116-3ea978e9f42a?w=400&h=300&fit=crop" alt="Irish Coffee">
