@@ -36,3 +36,24 @@ drinkCards.forEach(function (card) {
   card.addEventListener('mouseenter', revealCard);
   card.addEventListener('mouseleave', hideCard);
 });
+
+// Toggle favorite state and update the counter
+function toggleFavorite(event) {
+  event.stopPropagation();
+  const btn = event.currentTarget;
+  btn.classList.toggle('favorited');
+
+  if (btn.classList.contains('favorited')) {
+    btn.textContent = '♥';
+  } else {
+    btn.textContent = '♡';
+  }
+
+  const totalFavorited = document.querySelectorAll('.fav-btn.favorited').length;
+  document.getElementById('favorite-counter').textContent = totalFavorited;
+}
+
+const favButtons = document.querySelectorAll('.fav-btn');
+favButtons.forEach(function (btn) {
+  btn.addEventListener('click', toggleFavorite);
+});
