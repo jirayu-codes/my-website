@@ -3,14 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+  <title>Brew Explorer — Coffee Drink Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
-  <h1>My Website</h1>
-  <p>Your content will go here.</p>
+  <header class="site-header">
+    <h1>Brew Explorer</h1>
+    <p class="tagline">Discover your perfect cup</p>
+    <span class="fav-counter" id="favorite-counter">0</span>
+  </header>
+
+  <section class="filters" aria-label="Filter drinks by category">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="hot">Hot</button>
+    <button class="filter-btn" data-filter="iced">Iced</button>
+  </section>
+
+  <main class="drink-grid">
+
+    <div class="drink-card" data-category="hot">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Espresso icon">☕</span>
+        <h3>Espresso</h3>
+        <p>A bold, concentrated shot of coffee brewed under high pressure.</p>
+        <button class="fav-btn" aria-label="Add Espresso to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Finely ground coffee beans, hot water</p>
+        <p><strong>Fun fact:</strong> A single espresso shot is only about 1 ounce!</p>
+      </div>
+    </div>
+
+    <div class="drink-card" data-category="hot">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Latte icon">🥛</span>
+        <h3>Latte</h3>
+        <p>Espresso with steamed milk and a light layer of foam.</p>
+        <button class="fav-btn" aria-label="Add Latte to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Espresso, steamed milk, thin foam</p>
+        <p><strong>Fun fact:</strong> The word "latte" means "milk" in Italian.</p>
+      </div>
+    </div>
+
+    <div class="drink-card" data-category="hot">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Cappuccino icon">☕</span>
+        <h3>Cappuccino</h3>
+        <p>Equal parts espresso, steamed milk, and thick foam.</p>
+        <button class="fav-btn" aria-label="Add Cappuccino to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Espresso, steamed milk, generous foam</p>
+        <p><strong>Fun fact:</strong> Traditionally enjoyed only in the morning in Italy.</p>
+      </div>
+    </div>
+
+    <div class="drink-card" data-category="hot">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Mocha icon">🍫</span>
+        <h3>Mocha</h3>
+        <p>Espresso blended with chocolate and steamed milk.</p>
+        <button class="fav-btn" aria-label="Add Mocha to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Espresso, chocolate syrup, steamed milk, whipped cream</p>
+        <p><strong>Fun fact:</strong> Named after the port city of Mocha in Yemen.</p>
+      </div>
+    </div>
+
+    <div class="drink-card" data-category="hot">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Americano icon">💧</span>
+        <h3>Americano</h3>
+        <p>Espresso diluted with hot water for a smooth, bold taste.</p>
+        <button class="fav-btn" aria-label="Add Americano to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Espresso, hot water</p>
+        <p><strong>Fun fact:</strong> Popularized by American soldiers in WWII Italy.</p>
+      </div>
+    </div>
+
+    <div class="drink-card" data-category="hot">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Macchiato icon">🫖</span>
+        <h3>Macchiato</h3>
+        <p>Espresso "stained" with a small splash of steamed milk.</p>
+        <button class="fav-btn" aria-label="Add Macchiato to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Espresso, a dash of steamed milk</p>
+        <p><strong>Fun fact:</strong> "Macchiato" means "stained" or "spotted" in Italian.</p>
+      </div>
+    </div>
+
+    <div class="drink-card" data-category="iced">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Cold Brew icon">🧊</span>
+        <h3>Cold Brew</h3>
+        <p>Coffee steeped in cold water for 12–24 hours.</p>
+        <button class="fav-btn" aria-label="Add Cold Brew to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Coarse ground coffee, cold water, ice</p>
+        <p><strong>Fun fact:</strong> It's 67% less acidic than hot-brewed coffee.</p>
+      </div>
+    </div>
+
+    <div class="drink-card" data-category="hot">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Flat White icon">🤍</span>
+        <h3>Flat White</h3>
+        <p>Espresso with velvety steamed milk and no foam.</p>
+        <button class="fav-btn" aria-label="Add Flat White to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Espresso, microfoam steamed milk</p>
+        <p><strong>Fun fact:</strong> Originated in Australia or New Zealand — the debate continues!</p>
+      </div>
+    </div>
+
+    <div class="drink-card" data-category="hot">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Cortado icon">🤎</span>
+        <h3>Cortado</h3>
+        <p>Espresso "cut" with a small amount of warm milk.</p>
+        <button class="fav-btn" aria-label="Add Cortado to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Espresso, equal part warm milk</p>
+        <p><strong>Fun fact:</strong> A staple of Spanish café culture.</p>
+      </div>
+    </div>
+
+    <div class="drink-card" data-category="hot">
+      <div class="card-front">
+        <span class="drink-icon" role="img" aria-label="Irish Coffee icon">🍀</span>
+        <h3>Irish Coffee</h3>
+        <p>Hot coffee mixed with Irish whiskey and brown sugar.</p>
+        <button class="fav-btn" aria-label="Add Irish Coffee to favorites">♡</button>
+      </div>
+      <div class="card-back">
+        <p><strong>Ingredients:</strong> Hot coffee, Irish whiskey, brown sugar, cream</p>
+        <p><strong>Fun fact:</strong> Created in 1943 to warm up cold airline passengers.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Brew Explorer &copy; 2026 — Made with love and coffee.</p>
+  </footer>
 
 </body>
 </html>
